@@ -1,4 +1,3 @@
-# cmpe273-assignment3
 # LRU Cache and Bloom Filter
 
 The assignment 3 is based on our simple [distributed cache](https://github.com/sithu/cmpe273-spring20/tree/master/midterm) where you have implmented the GET and PUT operations.
