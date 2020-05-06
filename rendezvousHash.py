@@ -10,11 +10,14 @@ class NodeRing():
     
     def get_node(self, key_hex):
         key = int(key_hex, 16)
-        print(hash(key))
-        ss=str(self.nodes[0]['host'])+":"+str(self.nodes[0]['port'])
-        print(hash(ss)%(2**32))
-        node_index = key % len(self.nodes)
-        return self.nodes[node_index]
+        weight=[]
+        # below is the hash function to get weight(node,key)
+        for i in range(len(self.nodes)):
+            ss=str(self.nodes[i]['host'])+":"+str(self.nodes[i]['port'])
+            a=hash(ss)%(2**32)
+            weight.append(key%a)
+        # from the list get the max weight(node, key) and return 
+        return self.nodes[weight.index(max(weight))]
 
 
 def test():
@@ -25,4 +28,4 @@ def test():
 
 
 # Uncomment to run the above local test via: python3 node_ring.py
-test()
+#test()
