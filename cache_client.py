@@ -4,6 +4,8 @@ from sample_data import USERS
 from server_config import NODES
 from pickle_hash import serialize_GET, serialize_PUT, serialize_DELETE
 from node_ring import NodeRing
+from rendezvousHash import Rendezvous_node
+from consistanthash import Consistent_Node
 
 BUFFER_SIZE = 1024
 hash_codes = set()
@@ -135,7 +137,6 @@ def process(udp_clients):
         data_bytes, key = serialize_GET(hc)
         response = get(key, data_bytes, udp_clients)
         print(response)
-    
     htest=hash_codes.copy()
     for hc in htest:
         data_bytes, key = serialize_DELETE(hc)
