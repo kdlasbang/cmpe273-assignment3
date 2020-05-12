@@ -27,6 +27,8 @@ def test_bloom_filter():
         else: 
             print(f"'{word}' is definitely not present!") 
 
+    #print(bloomfilter.get_hash_count)
+
 
 if __name__=='__main__':
     test_bloom_filter()

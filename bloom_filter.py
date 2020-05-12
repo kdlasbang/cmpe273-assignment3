@@ -35,4 +35,5 @@ class BloomFilter(object):
     @classmethod
     def get_hash_count(self, m, n): 
         k = (m/n) * math.log(2) 
+        print(int(k))
         return int(k) 
