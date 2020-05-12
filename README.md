@@ -1,4 +1,6 @@
 Test Result for LRU Cache and Bloom filter
+![Image text](https://github.com/kdlasbang/cmpe273-assignment3/blob/master/bloomfilter.png)
+![Image text](https://github.com/kdlasbang/cmpe273-assignment3/blob/master/cache.png)
 
 
 
